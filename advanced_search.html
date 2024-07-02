@@ -58,18 +58,19 @@
             <div class="col-md-3 font-weight-bold">
                 <p>Find pages with...</p>
             </div>
-            <div class="col-md-3"></div>
+            <div class="col-md-4"></div>
             <div class="col-md-3 font-weight-bold text-left">
                 <p>To do this in the search box</p>
             </div>
         </div>
     </div>
+    <form action="https://www.google.com/search" method="GET">
     <div class="container-fluid ">
         <div class="row ml-4">
             <div class="col-md-2 d-flex align-items-center">
                 <p class="med">all these words:</p>
             </div>
-            <div class="col-md-4"><input type="text"></div>
+            <div class="col-md-5"><input type="text" name="q" autofocus></div>
             <div class="col-md-5 d-flex align-items-center">
                 <p class="small">Type the important words: tricolor rat terrier</p>
             </div>
@@ -80,7 +81,7 @@
             <div class="col-md-2 d-flex align-items-center">
                 <p class="med">this exact word or phrase:</p>
             </div>
-            <div class="col-md-4"><input type="text"></div>
+            <div class="col-md-5"><input type="text" name="q"></div>
             <div class="col-md-4 d-flex align-items-center">
                 <p class="small ">Put exact words in quotes: "rat terrier"</p>
             </div>
@@ -91,7 +92,7 @@
             <div class="col-md-2 d-flex align-items-center">
                 <p class="med">any of these words:</p>
             </div>
-            <div class="col-md-4"><input type="text"></div>
+            <div class="col-md-5"><input type="text" name="q"></div>
             <div class="col-md-4 d-flex align-items-center">
                 <p class="small ">Type OR between all the words you want: miniature OR standard</p>
             </div>
@@ -102,25 +103,32 @@
             <div class="col-md-2 d-flex align-items-center">
                 <p class="med">none of these words:</p>
             </div>
-            <div class="col-md-4"><input type="text"></div>
+            <div class="col-md-5"><input type="text" name="q"></div>
             <div class="col-md-4 d-flex align-items-center">
                 <p class="small ">Put a minus sign just before words you don't want: -rodent, -"Jack Russell"</p>
             </div>
         </div>
     </div>
-    <div class="container-fluid ">
-        <div class="row ml-4 ">
+    <div class="container-fluid">
+        <div class="row ml-4">
             <div class="col-md-2 d-flex align-items-center">
                 <p class="med">numbers ranging from:</p>
             </div>
-            <div class="col-md-4"><input type="text"></div>
-            <div class="col-md-4 d-flex align-items-center">
-                <p class="small ">Put 2 periods between the numbers and add a unit of measure: 10..35 lb, $300..$500,
-                    2010..2011
-                </p>
+            <div class="col-md-2">
+                <input type="text" name="q">
+            </div>
+            <div class="col text-center">
+                <input type="text" readonly style="border: none; background: none; width: 20px;" value="to" name="q">
+            </div>
+            <div class="col-md-2">
+                <input type="text" name="q">
+            </div>
+            <div class="col-md-5 d-flex align-items-center">
+                <p class="small">Enter a number range like min..max (e.g., 10..100)</p>
             </div>
         </div>
     </div>
+    
     <div class="container-fluid border-bottom my-4"></div>
     <div class="container-fluid pt-4 ">
         <div class="row ml-4">
@@ -138,8 +146,8 @@
             <div class="col-md-2 d-flex align-items-center">
                 <p class="med">language:</p>
             </div>
-            <div class="col-md-4">
-                <select class="form-select med">
+            <div class="col-md-5">
+                <select class="form-select" name="q">
                     <option value="">any language</option>
                     <option value="en">English</option>
                     <option value="es">Spanish</option>
@@ -186,8 +194,8 @@
             <div class="col-md-2 d-flex align-items-center">
                 <p class="med">region:</p>
             </div>
-            <div class="col-md-4">
-                <select class="form-select med">
+            <div class="col-md-5">
+                <select class="form-select" name="q">
                     <option value="">any region</option>
                     <option value="us">United States</option>
                     <option value="eu">European Union</option>
@@ -229,13 +237,13 @@
                 <p class="med">last update:
                 </p>
             </div>
-            <div class="col-md-4">
-                <select class="form-select med">
+            <div class="col-md-5">
+                <select class="form-select " name="q">
                     <option value="">anytime</option>
-                    <option value="24h">past 24 hours</option>
-                    <option value="week">past week</option>
-                    <option value="month">past month</option>
-                    <option value="year">past year</option>
+                    <option value="past 24 hours">past 24 hours</option>
+                    <option value="past week">past week</option>
+                    <option value="past month">past month</option>
+                    <option value="past year">past year</option>
                 </select>
             </div>
             <div class="col-md-4 d-flex align-items-center">
@@ -248,8 +256,8 @@
             <div class="col-md-2 d-flex align-items-center">
                 <p class="med">site or domain:</p>
             </div>
-            <div class="col-md-4"><input type="text"></div>
-            <div class="col-md-5 d-flex align-items-center">
+            <div class="col-md-5"><input type="text"></div>
+            <div class="col-md-4 d-flex align-items-center">
                 <p class="small">Search one site (like wikipedia.org ) or limit your results to a domain like .edu, .org
                     or .gov</p>
             </div>
@@ -261,13 +269,13 @@
                 <p class="med">terms appearing:
                 </p>
             </div>
-            <div class="col-md-4">
-                <select class="form-select med">
+            <div class="col-md-5">
+                <select class="form-select " name="q">
                     <option value="">anywhere in the page</option>
-                    <option value="title">in the title of the page</option>
-                    <option value="text">in the text of the page</option>
-                    <option value="url">in the URL of the page</option>
-                    <option value="links">in links to the page</option>
+                    <option value="allintitle:">in the title of the page</option>
+                    <option value="allintext:">in the text of the page</option>
+                    <option value="allinurl">in the URL of the page</option>
+                    <option value="allinanchor:">in links to the page</option>
                 </select>
             </div>
             <div class="col-md-4 d-flex align-items-center">
@@ -281,19 +289,19 @@
                 <p class="med">file type:
                 </p>
             </div>
-            <div class="col-md-4">
-                <select class="form-select med">
+            <div class="col-md-5">
+                <select class="form-select " name="q">
                     <option value="">any format</option>
-                    <option value="pdf">Adobe PDF files (.pdf)</option>
-                    <option value="ps">Adobe PostScript files (.ps)</option>
-                    <option value="dwf">Design Web Format (DWF)</option>
-                    <option value="kml">Keyhole Markup Language (KML)</option>
-                    <option value="kmz">Keyhole Markup Language Zipped (KMZ)</option>
-                    <option value="xls">Microsoft Excel files (XLS)</option>
-                    <option value="ppt">Microsoft PowerPoint files (PPT)</option>
-                    <option value="doc">Microsoft Word files (DOC)</option>
-                    <option value="rtf">Rich Text Format (RTF)</option>
-                    <option value="swf">Shockwave Flash files (SWF)</option>
+                    <option value="filetype:pdf">Adobe PDF files (.pdf)</option>
+                    <option value="filetype:ps">Adobe PostScript files (.ps)</option>
+                    <option value="filetype:dwf">Design Web Format (DWF)</option>
+                    <option value="filetype:kml">Keyhole Markup Language (KML)</option>
+                    <option value="filetype:kmz">Keyhole Markup Language Zipped (KMZ)</option>
+                    <option value="filetype:xls">Microsoft Excel files (XLS)</option>
+                    <option value="filetype:ppt">Microsoft PowerPoint files (PPT)</option>
+                    <option value="filetype:doc">Microsoft Word files (DOC)</option>
+                    <option value="filetype:rtf">Rich Text Format (RTF)</option>
+                    <option value="filetype:swf">Shockwave Flash files (SWF)</option>
                 </select>
             </div>
             <div class="col-md-4 d-flex align-items-center">
@@ -307,13 +315,13 @@
                 <p class="med">usage rights:
                 </p>
             </div>
-            <div class="col-md-4">
-                <select class="form-select med">
+            <div class="col-md-5">
+                <select class="form-select " name="q">
                     <option value="">not filtered by license</option>
-                    <option value="free">free to use or share</option>
-                    <option value="even commercially">free to use or share, even commercially</option>
-                    <option value="modify">free to use share or modify</option>
-                    <option value="modify even commercially">free to use, share or modify even commercially</option>
+                    <option value="free to use or share">free to use or share</option>
+                    <option value="free to use or share, even commercially">free to use or share, even commercially</option>
+                    <option value="free to use share or modify">free to use share or modify</option>
+                    <option value="free to use, share or modify even commercially">free to use, share or modify even commercially</option>
 
                 </select>
             </div>
@@ -327,17 +335,21 @@
             <div class="col-md-2 d-flex align-items-center">
 
             </div>
-            <div class="col-md-4">
-                <button class="bg-primary text-white float-right">Advanced Search</button>
+            <div class="col-md-5">
+                <button class="bg-primary text-white float-right p-2" type="submit" style="font-size: 13px; border: none;">Advanced Search</button>
             </div>
             <div class="col-md-4 d-flex align-items-center">
             </div>
         </div>
     </div>
+    </form>
     <div class="container-fluid border-bottom my-4"></div>
-    <div class="container-fluid">
+    <div class="container-fluid pb-4">
         <div class="row ml-4">
             <div class="col-md-12">
+                <div class="d-flex align-items-center">
+                    <h5>You can also...</h5>
+                </div>
                 <div class="d-flex align-items-center">
                     <a
                         href="https://support.google.com/websearch/answer/2466433?visit_id=638555294981961456-73545239&p=adv_pages_similar&hl=en&rd=1">Find
@@ -360,8 +372,7 @@
         </div>
 
     </div>
-    <div class="container-fluid border-bottom my-4"></div>
-    <div class="container-fluid bg-light">
+    <div class="container-fluid bg-light pt-4 pb-4">
         <div class="row ml-4">
             <div class="col">
                 <h5>Philippines</h5>
@@ -369,7 +380,8 @@
         </div>
         <div class="row ml-4">
             <div class="col-md-1">
-                <a href="https://support.google.com/websearch/?visit_id=638555294978490978-3461812374&hl=en-PH&rd=2#topic=3378866">Help</a>
+                <a
+                    href="https://support.google.com/websearch/?visit_id=638555294978490978-3461812374&hl=en-PH&rd=2#topic=3378866">Help</a>
             </div>
             <div class="col-md-1">
                 <a href="https://policies.google.com/privacy?hl=en-PH&fg=1">Privacy</a>
@@ -379,7 +391,7 @@
             </div>
         </div>
     </div>
-    
+
 
 
 
