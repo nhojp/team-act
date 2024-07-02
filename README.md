@@ -1,2 +1,1 @@
-# team-act
-Manjac, Mendoza and Torres
+# My New Repository
