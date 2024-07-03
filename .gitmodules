@@ -1,0 +1,3 @@
+[submodule "team-act"]
+	path = team-act
+	url = https://github.com/nhojp/team-act.git
